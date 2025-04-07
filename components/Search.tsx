@@ -26,7 +26,7 @@ const Search = () => {
         <TextInput
           value={search}
           onChangeText={handleSearch}
-          placeholder="Search for anything"
+          placeholder="Pesquisar por algo"
           className="text-sm font-rubik text-black-300 ml-2 flex-1"
         />
       </View>

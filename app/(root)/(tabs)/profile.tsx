@@ -51,10 +51,10 @@ const Profile = () => {
   const handleLogout = async () => {
     const result = await logout();
     if (result) {
-      Alert.alert("Success", "Logged out successfully");
+      Alert.alert("Sucesso", "Terminou sessão com sucesso");
       refetch();
     } else {
-      Alert.alert("Error", "Failed to logout");
+      Alert.alert("Erro", "Falhou a dar terminar sessão");
     }
   };
 
@@ -65,7 +65,7 @@ const Profile = () => {
         contentContainerClassName="pb-32 px-7"
       >
         <View className="flex flex-row items-center justify-between mt-5">
-          <Text className="text-xl font-rubik-bold">Profile</Text>
+          <Text className="text-xl font-rubik-bold">Perfil</Text>
           <Image source={icons.bell} className="size-5" />
         </View>
 
@@ -84,8 +84,8 @@ const Profile = () => {
         </View>
 
         <View className="flex flex-col mt-10">
-          <SettingsItem icon={icons.calendar} title="My Bookings" />
-          <SettingsItem icon={icons.wallet} title="Payments" />
+          <SettingsItem icon={icons.calendar} title="As minha reservas" />
+          <SettingsItem icon={icons.wallet} title="Pagamentos" />
         </View>
 
         <View className="flex flex-col mt-5 border-t pt-5 border-primary-200">
@@ -97,7 +97,7 @@ const Profile = () => {
         <View className="flex flex-col border-t mt-5 pt-5 border-primary-200">
           <SettingsItem
             icon={icons.logout}
-            title="Logout"
+            title="Terminar Sessão"
             textStyle="text-danger"
             showArrow={false}
             onPress={handleLogout}
